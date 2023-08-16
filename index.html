@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Movie Booking Website</title>
+</head>
+<body>
+    <header>
+        <h1>Movie Booking</h1>
+    </header>
+    <main>
+        <section class="movie-list">
+            <h2>Now Showing</h2>
+            <div class="movie" onclick="bookTicket('Avengers: Endgame', 'Action', '2D', '14:00')">Avengers: Endgame</div>
+            <div class="movie" onclick="bookTicket('Inception', 'Sci-Fi', '3D', '16:30')">Inception</div>
+            <div class="movie" onclick="bookTicket('The Lion King', 'Animation', '2D', '18:00')">The Lion King</div>
+        </section>
+        <section class="booking-form">
+            <h2>Booking Details</h2>
+            <div class="selected-movie">
+                <h3>Selected Movie: <span id="selectedMovieTitle"></span></h3>
+                <p>Genre: <span id="selectedMovieGenre"></span></p>
+                <p>Showtime: <span id="selectedMovieShowtime"></span></p>
+            </div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <button id="bookBtn" onclick="confirmBooking()">Book Now</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Movie Booking Website</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
